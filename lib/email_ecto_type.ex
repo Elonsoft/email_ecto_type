@@ -8,9 +8,7 @@ if Code.ensure_compiled?(Ecto.Type) do
 
     Suppose you define the following schema
 
-    #{
-      EmailEctoType.DocHelpers.import_src!(__ENV__, "../test/support/schema.ex")
-    }
+    #{EmailEctoType.DocHelpers.import_src!("test/support/schema.ex")}
 
     Now you can validate an email like this:
 
@@ -35,19 +33,13 @@ if Code.ensure_compiled?(Ecto.Type) do
 
     You can also define your custom email type using this module:
 
-    #{
-      EmailEctoType.DocHelpers.import_src!(
-        __ENV__,
-        "../test/support/custom_email_type.ex"
-      )
-    }
+    #{EmailEctoType.DocHelpers.import_src!("test/support/custom_email_type.ex")}
 
     And use it in schema:
 
     #{
       EmailEctoType.DocHelpers.import_src!(
-        __ENV__,
-        "../test/support/schema_with_custom_type.ex"
+        "test/support/schema_with_custom_type.ex"
       )
     }
 

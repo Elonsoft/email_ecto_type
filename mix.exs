@@ -1,7 +1,7 @@
 defmodule EmailEctoType.MixProject do
   use Mix.Project
 
-  @version "0.1.1"
+  @version "0.1.2"
 
   def project do
     [
@@ -54,7 +54,8 @@ defmodule EmailEctoType.MixProject do
   defp package do
     [
       links: %{"GitHub" => "https://github.com/Elonsoft/email_ecto_type"},
-      licenses: ["MIT"]
+      licenses: ["MIT"],
+      files: ~w(.formatter.exs mix.exs README.md LICENSE.md lib test/support)
     ]
   end
 end
