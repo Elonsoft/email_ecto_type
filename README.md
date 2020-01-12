@@ -1,5 +1,8 @@
 # EmailEctoType
 
+![](https://github.com/Elonsoft/email_ecto_type/workflows/mix%20test/badge.svg)
+![](https://github.com/Elonsoft/email_ecto_type/workflows/mix%20format/badge.svg)
+
 An ecto type that provides easy way of managing email addresses
 in a database.
 
