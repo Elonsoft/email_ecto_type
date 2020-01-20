@@ -18,7 +18,7 @@ of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:email_ecto_type, "~> 0.1.2"}
+    {:email_ecto_type, "~> 0.1"}
   ]
 end
 ```
