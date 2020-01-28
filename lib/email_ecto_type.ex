@@ -83,6 +83,10 @@ if Code.ensure_compiled?(Ecto.Type) do
       {:ok, email}
     end
 
+    def cast(_, _) do
+      :error
+    end
+
     @impl Ecto.Type
     def load(address) when is_binary(address) do
       case Email.new(address) do
@@ -92,8 +96,18 @@ if Code.ensure_compiled?(Ecto.Type) do
     end
 
     @impl Ecto.Type
+    def load(_) do
+      :error
+    end
+
+    @impl Ecto.Type
     def dump(%Email{address: address}) do
       {:ok, address}
+    end
+
+    @impl Ecto.Type
+    def dump(_) do
+      :error
     end
 
     @impl Ecto.Type
@@ -108,6 +122,10 @@ if Code.ensure_compiled?(Ecto.Type) do
 
     def equal?(%Email{address: address}, %Email{address: address}, _) do
       true
+    end
+
+    def equal?(%Email{address: _first}, %Email{address: _second}, _) do
+      false
     end
 
     def equal?(str1, str2, validators) when is_list(validators) do
